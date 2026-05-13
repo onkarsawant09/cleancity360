@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Database Architecture — Infographic & Explanation</title>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --glass: rgba(255,255,255,0.03);
+      --layer-h:72px; --gap:18px; --w:900px;
+    }
+    body{font-family:Inter,Segoe UI,system-ui,Roboto,Arial; margin:24px; background:linear-gradient(180deg,#071024 0%, #071a2a 100%); color:#e6eef6}
+    .wrap{max-width:1100px;margin:0 auto}
+    header{display:flex;align-items:center;gap:18px}
+    h1{font-size:22px;margin:0}
+    p.lead{color:var(--muted);margin:6px 0 18px}
+
+    /* Infographic card */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:22px;border-radius:12px; box-shadow:0 10px 30px rgba(2,6,23,0.6);}
+    .infographic{display:flex;gap:20px;align-items:flex-start}
+    .canvas{width:540px;padding:18px;background:var(--glass);border-radius:10px}
+    .legend{flex:1}
+
+    /* Layer stack */
+    .stack{display:flex;flex-direction:column;gap:var(--gap);transform:translateY(0)}
+    .layer{height:var(--layer-h);border-radius:10px;padding:12px 16px;display:flex;align-items:center;gap:14px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
+    .layer .dot{width:56px;height:56px;border-radius:10px;background:linear-gradient(180deg,#001219,#00303f);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .layer h3{margin:0;font-size:16px}
+    .layer p{margin:0;color:var(--muted);font-size:13px}
+
+    /* arrows */
+    .arrow{height:18px;display:flex;align-items:center;justify-content:center}
+
+    /* legend styling */
+    .legend h2{font-size:18px;margin:4px 0}
+    .legend ul{padding-left:18px;color:var(--muted)}
+    .example-photos{display:flex;gap:8px;margin-top:14px}
+    .photo{width:120px;height:80px;border-radius:8px;background:linear-gradient(180deg,#06202b,#04303f);display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.03)}
+    .photo small{color:var(--muted);font-size:12px}
+
+    /* explanations */
+    .details{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .box{background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+    .box h4{margin:0 0 8px;font-size:14px}
+    .box p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}
+
+    footer{margin-top:16px;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:980px){.infographic{flex-direction:column}.canvas{width:100%}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+        <rect x="2" y="3" width="20" height="18" rx="3" fill="#052f37" />
+        <path d="M7 8h10M7 12h10M7 16h6" stroke="#06b6d4" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h1>Database Architecture — Components & Layers (Infographic)</h1>
+        <p class="lead">A single-file HTML infographic with a layered diagram, short photos/icons, and detailed descriptions for each component.</p>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="infographic">
+        <div class="canvas">
+          <!-- SVG Layered diagram -->
+          <svg viewBox="0 0 540 540" width="100%" height="100%" role="img" aria-label="Layered database architecture diagram">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#042f3a"/><stop offset="1" stop-color="#01343f"/></linearGradient>
+              <filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000" flood-opacity="0.6"/></filter>
+            </defs>
+
+            <!-- background grid -->
+            <rect x="8" y="8" width="524" height="524" rx="10" fill="url(#g1)" opacity="0.6" />
+
+            <!-- stack labels top-down -->
+            <!-- Client & Apps -->
+            <g transform="translate(30,28)">
+              <rect width="480" height="64" rx="10" fill="#083644" stroke="#075a66"/>
+              <text x="22" y="40" fill="#aee8ef" font-size="16" font-weight="700">Client Applications & APIs</text>
+              <text x="24" y="56" fill="#9fcbd1" font-size="11">Web, Mobile, BI tools, REST/gRPC</text>
+            </g>
+
+            <!-- Arrow -->
+            <g transform="translate(250,112)">
+              <path d="M0 0 L0 20" stroke="#0ea5b7" stroke-width="2" stroke-linecap="round"/>
+            </g>
+
+            <!-- Query Layer -->
+            <g transform="translate(30,140)">
+              <rect width="480" height="64" rx="10" fill="#0a3040" stroke="#07707f"/>
+              <text x="22" y="40" fill="#bdf3f7" font-size="16" font-weight="700">Query Processor & Optimizer</text>
+              <text x="24" y="56" fill="#9fcbd1" font-size="11">SQL parser, optimizer, execution planner</text>
+            </g>
+
+            <!-- Arrow -->
+            <g transform="translate(250,224)">
+              <path d="M0 0 L0 20" stroke="#0ea5b7" stroke-width="2" stroke-linecap="round"/>
+            </g>
+
+            <!-- Transaction / Concurrency -->
+            <g transform="translate(30,252)">
+              <rect width="480" height="64" rx="10" fill="#072233" stroke="#0b5561"/>
+              <text x="22" y="40" fill="#bdf3f7" font-size="16" font-weight="700">Transaction Manager & Concurrency Control</text>
+              <text x="24" y="56" fill="#9fcbd1" font-size="11">ACID, locking, MVCC, commit/rollback</text>
+            </g>
+
+            <!-- Arrow -->
+            <g transform="translate(250,336)">
+              <path d="M0 0 L0 20" stroke="#0ea5b7" stroke-width="2" stroke-linecap="round"/>
+            </g>
+
+            <!-- Storage Engine -->
+            <g transform="translate(30,364)">
+              <rect width="480" height="64" rx="10" fill="#04222b" stroke="#055c64"/>
+              <text x="22" y="36" fill="#bdf3f7" font-size="16" font-weight="700">Storage Manager & Buffer Manager</text>
+              <text x="24" y="54" fill="#9fcbd1" font-size="11">Pages, buffer pool, I/O scheduling, write-ahead logging</text>
+            </g>
+
+            <!-- Arrow -->
+            <g transform="translate(250,448)">
+              <path d="M0 0 L0 20" stroke="#0ea5b7" stroke-width="2" stroke-linecap="round"/>
+            </g>
+
+            <!-- Physical Storage -->
+            <g transform="translate(30,492)">
+              <rect width="480" height="36" rx="8" fill="#02161a" stroke="#03424a"/>
+              <text x="22" y="24" fill="#bdf3f7" font-size="13" font-weight="700">Physical Storage (Disks, SSDs, Cloud Block Storage)</text>
+            </g>
+
+            <!-- side callouts -->
+            <g transform="translate(8,216)">
+              <rect x="-6" y="-8" width="110" height="160" rx="8" fill="#021b24" opacity="0.96" stroke="#07323b"/>
+              <text x="8" y="18" fill="#9feaf2" font-size="12" font-weight="700">Supporting Components</text>
+              <text x="8" y="36" fill="#9fcbd1" font-size="11">• Indexes (B-tree, Hash)</text>
+              <text x="8" y="54" fill="#9fcbd1" font-size="11">• Metadata / System Catalog</text>
+              <text x="8" y="72" fill="#9fcbd1" font-size="11">• Replication & Backup</text>
+              <text x="8" y="90" fill="#9fcbd1" font-size="11">• Security & Access Control</text>
+              <text x="8" y="108" fill="#9fcbd1" font-size="11">• Cache & CDN</text>
+            </g>
+
+            <!-- right-side ops -->
+            <g transform="translate(420,196)">
+              <rect x="-6" y="-8" width="120" height="130" rx="8" fill="#021b24" opacity="0.96" stroke="#07323b"/>
+              <text x="8" y="18" fill="#9feaf2" font-size="12" font-weight="700">Administration</text>
+              <text x="8" y="36" fill="#9fcbd1" font-size="11">• Monitoring & Logging</text>
+              <text x="8" y="54" fill="#9fcbd1" font-size="11">• Backup Scheduling</text>
+              <text x="8" y="72" fill="#9fcbd1" font-size="11">• Scaling: Sharding / Partitioning</text>
+              <text x="8" y="90" fill="#9fcbd1" font-size="11">• Backup/Restore</text>
+            </g>
+
+          </svg>
+        </div>
+
+        <aside class="legend">
+          <h2>Quick Legend</h2>
+          <ul>
+            <li><strong>Client Apps:</strong> Interfaces that send queries (SQL/NoSQL) or API calls.</li>
+            <li><strong>Query Processor:</strong> Parses SQL, creates execution plans, optimizes joins and scans.</li>
+            <li><strong>Transaction Manager:</strong> Ensures ACID properties, handles locks/MVCC.</li>
+            <li><strong>Storage Manager:</strong> Manages buffer pool, pages, and I/O to physical storage.</li>
+            <li><strong>Physical Storage:</strong> Actual disks/SSDs or cloud block objects.
+          </ul>
+
+          <div class="example-photos" aria-hidden>
+            <div class="photo"><small>Diagram: query flow</small></div>
+            <div class="photo"><small>Photo: rack & servers</small></div>
+            <div class="photo"><small>Photo: backup tape</small></div>
+          </div>
+
+          <p style="margin-top:12px;color:var(--muted)">This diagram is intentionally simplified — scroll down for detailed component explanations and real-world mapping examples (MySQL, PostgreSQL, MongoDB, Cassandra).</p>
+        </aside>
+      </div>
+
+      <div class="details">
+        <div class="box">
+          <h4>Client & API Layer</h4>
+          <p>Web apps, mobile clients, BI tools and external services connect here. Communication uses SQL over a DB protocol, or REST/gRPC built on top of database APIs.</p>
+        </div>
+        <div class="box">
+          <h4>Query Processor & Optimizer</h4>
+          <p>Responsible for turning SQL into an optimized execution plan: parsing, semantic analysis, cost-based optimization, and plan selection (indexes, join orders).</p>
+        </div>
+
+        <div class="box">
+          <h4>Transaction Manager & Concurrency</h4>
+          <p>Enforces ACID semantics. Manages locks or MVCC snapshots, coordinates commit with the storage manager (two-phase commit in distributed systems).</p>
+        </div>
+        <div class="box">
+          <h4>Storage & Buffer Manager</h4>
+          <p>Maintains an in-memory buffer pool, orders reads/writes, implements write-ahead logging (WAL) for durability, and performs checkpointing to flush pages to disk.</p>
+        </div>
+
+        <div class="box">
+          <h4>Physical Storage</h4>
+          <p>Local disks, RAID arrays, SSDs, or cloud block storage. In distributed DBs this layer includes object stores (S3) or distributed file systems.</p>
+        </div>
+        <div class="box">
+          <h4>Supporting Components</h4>
+          <p>Indexes speed lookups (B-tree, hash, LSM trees). System catalog stores schema and metadata. Replication, backup, security, caching, and monitoring sit alongside.</p>
+        </div>
+      </div>
+
+      <footer>
+        <strong>How to use this HTML:</strong> open this file in any browser to view the infographic. You can copy the code and paste it into a file named <code>db-architecture.html</code> to share or edit.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

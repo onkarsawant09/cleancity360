@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Architecture Components</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .component-card {
+            transition: all 0.3s ease;
+        }
+        .component-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .architecture-layer {
+            border-left: 3px solid #3b82f6;
+        }
+        @media (max-width: 768px) {
+            .architecture-layer {
+                border-left: none;
+                border-top: 3px solid #3b82f6;
+                padding-left: 0;
+                padding-top: 1rem;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Database Architecture Components</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Understanding the layered structure of database systems and their core components
+            </p>
+        </header>
+
+        <main class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Layer 1: External Level -->
+            <div class="architecture-layer lg:col-span-1 p-4">
+                <h2 class="text-xl font-semibold text-blue-700 mb-6 flex items-center">
+                    <span class="bg-blue-100 p-2 rounded-full mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </span>
+                    External Level
+                </h2>
+                
+                <div class="component-card bg-white rounded-lg shadow-md p-5 mb-4">
+                    <h3 class="font-medium text-gray-800 mb-2">User Interfaces</h3>
+                    <p class="text-sm text-gray-600">Applications, forms, reports, and query tools that interact with the database.</p>
+                    <img src="https://placeholder-image-service.onrender.com/image/300x150?prompt=Modern database user interface with query tools and data visualization&id=d97d4687-7602-4302-83a4-7fb1f391531d&customer_id=cus_T0ou4f6FKJWqIn" alt="Modern database user interface with query tools and data visualization" class="w-full h-auto rounded mt-3">
+                </div>
+                
+                <div class="component-card bg-white rounded-lg shadow-md p-5 mb-4">
+                    <h3 class="font-medium text-gray-800 mb-2">APIs & Connectors</h3>
+                    <p class="text-sm text-gray-600">ODBC, JDBC, and other drivers that enable applications to communicate with the DBMS.</p>
+                    <img src="https://placeholder-image-service.onrender.com/image/300x150?prompt=Database API connectors showing code integration with applications&id=d97d4687-7602-4302-83a4-7fb1f391531d&customer_id=cus_T0ou4f6FKJWqIn" alt="Database API connectors showing code integration with applications" class="w-full h-auto rounded mt-3">
+                </div>
+            </div>
+
+            <!-- Layer 2: Conceptual Level -->
+            <div class="architecture-layer lg:col-span-1 p-4">
+                <h2 class="text-xl font-semibold text-purple-700 mb-6 flex items-center">
+                    <span class="bg-purple-100 p-2 rounded-full mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                    </span>
+                    Conceptual Level
+                </h2>
+                
+                <div class="component-card bg-white rounded-lg shadow-md p-5 mb-4">
+                    <h3 class="font-medium text-gray-800 mb-2">Data Model</h3>
+                    <p class="text-sm text-gray-600">The logical structure of the entire database including entities, relationships, and constraints.</p>
+                    <img src="https://placeholder-image-service.onrender.com/image/300x150?prompt=Entity Relationship Diagram showing database schema design&id=d97d4687-7602-4302-83a4-7fb1f391531d&customer_id=cus_T0ou4f6FKJWqIn" alt="Entity Relationship Diagram showing database schema design" class="w-full h-auto rounded mt-3">
+                </div>
+                
+                <div class="component-card bg-white rounded-lg shadow-md p-5 mb-4">
+                    <h3 class="font-medium text-gray-800 mb-2">Schema</h3>
+                    <p class="text-sm text-gray-600">The overall design of the database describing tables, views, indexes, and relationships.</p>
+                    <img src="https://placeholder-image-service.onrender.com/image/300x150?prompt=Database schema visualization with tables and relationships&id=d97d4687-7602-4302-83a4-7fb1f391531d&customer_id=cus_T0ou4f6FKJWqIn" alt="Database schema visualization with tables and relationships" class="w-full h-auto rounded mt-3">
+                </div>
+            </div>
+
+            <!-- Layer 3: Internal Level -->
+            <div class="architecture-layer lg:col-span-1 p-4">
+                <h2 class="text-xl font-semibold text-green-700 mb-6 flex items-center">
+                    <span class="bg-green-100 p-2 rounded-full mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                        </svg>
+                    </span>
+                    Internal Level
+                </h2>
+                
+                <div class="component-card bg-white rounded-lg shadow-md p-5 mb-4">
+                    <h3 class="font-medium text-gray-800 mb-2">Storage Structures</h3>
+                    <p class="text-sm text-gray-600">How data is physically stored on disk (files, pages, records, and data organization).</p>
+                    <img src="https://placeholder-image-service.onrender.com/image/300x150?prompt=Database storage structure showing data blocks and pages on disk&id=d97d4687-7602-4302-83a4-7fb1f391531d&customer_id=cus_T0ou4f6FKJWqIn" alt="Database storage structure showing data blocks and pages on disk" class="w-full h-auto rounded mt-3">
+                </div>
+                
+                <div class="component-card bg-white rounded-lg shadow-md p-5 mb-4">
+                    <h3 class="font-medium text-gray-800 mb-2">Indexing</h3>
+                    <p class="text-sm text-gray-600">Data structures like B-trees and hash indexes that enable efficient data retrieval.</p>
+                    <img src="https://placeholder-image-service.onrender.com/image/300x150?prompt=B-tree index structure visualization for database indexing&id=d97d4687-7602-4302-83a4-7fb1f391531d&customer_id=cus_T0ou4f6FKJWqIn" alt="B-tree index structure visualization for database indexing" class="w-full h-auto rounded mt-3">
+                </div>
+            </div>
+
+            <!-- Layer 4: DBMS Core -->
+            <div class="architecture-layer lg:col-span-1 p-4">
+                <h2 class="text-xl font-semibold text-red-700 mb-6 flex items-center">
+                    <span class="bg-red-100 p-2 rounded-full mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                        </svg>
+                    </span>
+                    DBMS Core
+                </h2>
+                
+                <div class="component-card bg-white rounded-lg shadow-md p-5 mb-4">
+                    <h3 class="font-medium text-gray-800 mb-2">Query Processor</h3>
+                    <p class="text-sm text-gray-600">Interprets queries, creates execution plans, and optimizes query performance.</p>
+                    <img src="https://placeholder-image-service.onrender.com/image/300x150?prompt=Database query processing engine with execution plan visualization&id=d97d4687-7602-4302-83a4-7fb1f391531d&customer_id=cus_T0ou4f6FKJWqIn" alt="Database query processing engine with execution plan visualization" class="w-full h-auto rounded mt-3">
+                </div>
+                
+                <div class="component-card bg-white rounded-lg shadow-md p-5 mb-4">
+                    <h3 class="font-medium text-gray-800 mb-2">Transaction Manager</h3>
+                    <p class="text-sm text-gray-600">Ensures ACID properties (Atomicity, Consistency, Isolation, Durability) for database transactions.</p>
+                    <img src="https://placeholder-image-service.onrender.com/image/300x150?prompt=Database transaction management with ACID properties diagram&id=d97d4687-7602-4302-83a4-7fb1f391531d&customer_id=cus_T0ou4f6FKJWqIn" alt="Database transaction management with ACID properties diagram" class="w-full h-auto rounded mt-3">
+                </div>
+            </div>
+        </main>
+
+        <!-- Additional Information Section -->
+        <section class="mt-16 bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Understanding Database Architecture Layers</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-blue-600 mb-3">The Three-Level Architecture</h3>
+                    <p class="text-gray-700 mb-4">
+                        Database architecture is typically organized into three levels that separate the user's view of data from the physical storage:
+                    </p>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><strong>External Level:</strong> How users perceive the data - includes user interfaces and application views</li>
+                        <li><strong>Conceptual Level:</strong> The community view of the database - describes what data is stored and relationships</li>
+                        <li><strong>Internal Level:</strong> How the data is physically stored - deals with storage structures and file organization</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-blue-600 mb-3">Key Benefits of Layered Architecture</h3>
+                    <p class="text-gray-700 mb-4">
+                        This separation of concerns provides several important advantages:
+                    </p>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li><strong>Data Independence:</strong> Changes at one level don't affect other levels</li>
+                        <li><strong>Security:</strong> Users only see data they're authorized to access</li>
+                        <li><strong>Customization:</strong> Different views for different user groups</li>
+                        <li><strong>Maintainability:</strong> Easier to modify storage structures without affecting applications</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-8 p-4 bg-blue-50 rounded-lg">
+                <h3 class="text-lg font-semibold text-blue-700 mb-3">Tools for Creating Database Diagrams</h3>
+                <p class="text-gray-700">
+                    For creating professional database architecture diagrams, consider using tools like:
+                </p>
+                <div class="grid grid-cols-2 gap-4 mt-4">
+                    <div class="bg-white p-3 rounded shadow-sm">
+                        <h4 class="font-medium text-gray-800">Draw.io</h4>
+                        <p class="text-sm text-gray-600">Free online diagramming tool with extensive database shape libraries</p>
+                    </div>
+                    <div class="bg-white p-3 rounded shadow-sm">
+                        <h4 class="font-medium text-gray-800">Lucidchart</h4>
+                        <p class="text-sm text-gray-600">Web-based diagramming application with collaboration features</p>
+                    </div>
+                    <div class="bg-white p-3 rounded shadow-sm">
+                        <h4 class="font-medium text-gray-800">Canva</h4>
+                        <p class="text-sm text-gray-600">Design platform with database infographic templates</p>
+                    </div>
+                    <div class="bg-white p-3 rounded shadow-sm">
+                        <h4 class="font-medium text-gray-800">Microsoft Visio</h4>
+                        <p class="text-sm text-gray-600">Professional diagramming tool with database modeling features</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

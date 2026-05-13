@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoClean Services - Waste Management & Cleaning Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0fdf4; /* Light green for eco theme */
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .eco-icon {
+            width: 60px;
+            height: 60px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .section-title {
+            color: #065f46;
+        }
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .floating-chat {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="eco-icon">SW</div>
+            <h1 class="text-2xl font-bold text-green-800">Smart waste</h1>
+            <button id="menu-btn" class="md:hidden text-green-800">Menu</button>
+            <ul id="menu" class="hidden md:flex space-x-6">
+                <li><a href="#dashboard" class="text-green-700 hover:text-green-900">Dashboard</a></li>
+                <li><a href="#scheduling" class="text-green-700 hover:text-green-900">Scheduling</a></li>
+                <li><a href="#services" class="text-green-700 hover:text-green-900">Services</a></li>
+                <li><a href="#support" class="text-green-700 hover:text-green-900">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-bg text-white py-20">
+        <div class="container mx-auto px-4 text-center animate-fade-in">
+            <h2 class="text-4xl font-bold mb-4">Welcome to Smartwaste - Your Sustainable Cleaning & Waste Management Solution</h2>
+            <p class="text-xl mb-8">Experience a user-friendly platform designed for efficient waste collection, eco-friendly services, and community-driven sustainability.</p>
+            <img src="photos\poster.jpeg" alt="Detailed cityscape showing green skyscrapers with solar panels, wind turbines in the background, clean streets with bicycles, and people walking with recycling bags, conveying a sustainable and eco-friendly urban environment in a vibrant, daylight scene with blue skies and no pollution" class="mx-auto rounded-lg shadow-lg" />
+        </div>
+    </section>
+
+    <section id="dashboard" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold section-title mb-8 text-center">Into & Problems</h3>
+            <div class="feature-list">
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="photos\intro.jpg" alt="High-resolution dashboard interface showing interactive waste tracking charts, service request forms, calendars for scheduling, and environmental impact graphs in a clean, minimalist design with green accents for eco-theme, displayed on a widescreen monitor in a modern office setting" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">Introduction</h4>
+                    <p>1.The smart waste is project created out of concern about environmental issues arising due to lack of proper waste management.<BR>
+2.And smart waste is small yet ambitious solution that we try to implement into society, to help manage waste and keep our life healthy.
+.</p>
+                </div>
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="photos\problem.jpg" alt="Close-up view of a mobile phone screen displaying the dashboard app with touch-friendly buttons for reports, notifications, and quick actions, surrounded by a user's hand holding the device in a bright room with natural light, emphasizing mobility and ease of access" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">Problems</h4>
+                    <p><b>1.</b>India  ranks first globally as the largest emitter of plastic pollution , realising approximately 9.3 million tonnes of plastics waste annually.
+<br><b>2.</b> Today these in various health problems like asthma , cancer,  various digestive problems, Chorela,typhoid,hepatic B/C etc. are either cause due to waste or are related to the waste pollution directly or indirectly.
+<br><b>3.</b>Poor waste management lead to poor quality of lifestyles.
+<br><b>4</b>Physical waste not only pollute things by land contamination, but is directly related to increase in water and air pollution .
+<br><b>5</b>And the all these problem arise when we do not mange waste property  ,and some responsibilities for that must be due to lack of incompatibility of governing body and lazy and non- discipline citizens of country.
+<br><b>6.</b>The mismatch of timing of garbage collecting truck lead to increase in waste piles in environment, so  the citizens not knowing when to dispose garbage must be avoid.
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="scheduling" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold section-title mb-8 text-center">2. Intention & Invention</h3>
+            <div class="feature-list">
+                <div class="card bg-white p-6 rounded-lg shadow">
+                    <img src="photos\intention.jpg" alt="Wide-angle shot of a computer screen showing a yearly calendar with color-coded events for weekly waste pickup, monthly cleaning services, and one-time requests, including pop-up notifications for alerts and reminders in a simplistic calendar interface with green indicators for eco-friendly services" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">Intention</h4>
+                    <p><b>1.</b>So our intention through this project is to help society manage waste , ultimately improving there standards of living, by providing convenient options to handle waste .
+<br><b>2.</b>In Today’s era of technology we should try to find solutions of these traditional problems with new and technological solutions that’s why we  invented smart waste .
+<br><b>3.</b>To reduce waste piles so the adverse effects of waste on environment to reduce soil pollution,water pollution,air pollution, improve standard.
+.</p>
+                </div>
+                <div class="card bg-white p-6 rounded-lg shadow">
+                    <img src="photos\invention.jpg" alt="Split-screen view: left side showing a time selector wheel with morning, afternoon, evening options; right side displaying preference checkboxes for recurring schedules, eco-waste priority, and special instructions, in a user input form on a website with a professional, airy layout" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">Invention</h4>
+                    <p><br><b>1.</b>The smart waste is made in digital platforms , we have invented this project to bring convenience in garbage collecting system with providing detail time schedule with delay and tracking of garbage collecting vehicle ,with exact locations of these vehicles.
+<br><b>2.</b>It also provide cleaning solution to generals citizens as we tend to create platform that can be intermediate between workers and citizens, which will create employment and give citizens solid option to manage waste .(It can include government institute, public places, hotels, hospitals,or even private sector institutions or private household.)
+.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+     <section id="scheduling" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold section-title mb-8 text-center">3. Methodology & Intresting Fact</h3>
+            <div class="feature-list">
+                <div class="card bg-white p-6 rounded-lg shadow">
+                    <img src="photos\dbcfd1dc-435a-4f54-9dd9-64c5cfc34fb6.jpg" alt="Wide-angle shot of a computer screen showing a yearly calendar with color-coded events for weekly waste pickup, monthly cleaning services, and one-time requests, including pop-up notifications for alerts and reminders in a simplistic calendar interface with green indicators for eco-friendly services" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">Smaet QR code system</h4>
+                    <p><b>Scanning and Notification: When a user, a park attendant, or a designated community member observes that the bin is nearly full or overflowing, they can scan the QR code using a smartphone application.
+
+Information Form/Submission: Scanning the code opens an online form or a dedicated application interface. The user would then be prompted to fill in information about the bin's status. This information usually includes:
+
+Bin ID/Location: The QR code inherently provides the unique identifier and geographic location of that specific bin (e.g., "Park Bin - West Entrance").
+
+Status Update: The user reports the issue (e.g., "Bin is full," "Bin is overflowing," "Lid is broken").
+
+Optional Photo: They might be able to upload a photo (like the one you mentioned) as visual evidence of the overflow.
+</p>
+                </div>
+                <div class="card bg-white p-6 rounded-lg shadow">
+                    <img src="photos\intresting.jpg" alt="Split-screen view: left side showing a time selector wheel with morning, afternoon, evening options; right side displaying preference checkboxes for recurring schedules, eco-waste priority, and special instructions, in a user input form on a website with a professional, airy layout" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">Intresting Fact</h4>
+                    <p><br><b>1.</b>The breakthrough lies in the mealworm's astounding ability to digest plastic—a feat once deemed impossible.
+<br><b>2.</b> discovery offers a glimmer of hope in the battle against plastic pollution, potentially providing a key to mitigating a worldwide environmental disaster.
+
+.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold section-title mb-8 text-center">Comprehensive Services</h3>
+            <div class="feature-list">
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dff5e7ca-ebe5-4700-8c1a-edc8955057ec.png" alt="Illustration of a secure payment screen displaying credit card fields, security badges like padlocks and shields, multi-currency options, and confirmation receipts for waste management fees in a blue-themed digital interface symbolizing trust and reliability" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">3. Integrated Payment Gateway</h4>
+                    <p>Secure online payments for subscriptions and one-time services with support for multiple payment methods.</p>
+                </div>
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b42773c9-09d8-48dd-9b8a-96bf01832b9d.png" alt="Top-down satellite-style map with a moving truck icon on a route, overlaying real-time location pins for waste collection points, live updates for estimated arrival times, and eco-friendly markers in a green landscape with urban streets" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">4. Real-Time Tracking</h4>
+                    <p>Track your service providers in real-time via GPS for waste collection and cleaning services.</p>
+                </div>
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bcd2766b-ea13-4f71-bf7d-b1799a6ec219.png" alt="Educational poster-style graphic showing three-colored recycle bins for glass, paper, plastic, with step-by-step tips like separating organics, reducing waste, and composting instructions in an informative, colorful layout on a community board" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">5. Waste Segregation & Recycling Tips</h4>
+                    <p>Learn effective recycling techniques with interactive guides and community-shared tips for eco-living.</p>
+                </div>
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/985f5050-afa3-4a55-99ba-1b7efef8799e.png" alt="Explicit diagram of a drain pipe with blockages, plumber tools like plungers and snakes, before-and-after visuals of cleaned drains, and a checklist for preventive maintenance in a tidy kitchen sink environment" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">6. Cleaner Man Service (Drain Cleaning)</h4>
+                    <p>Professional drain and plumbing cleaning services to maintain efficient waste disposal systems.</p>
+                </div>
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cce84449-2721-4470-80f5-9519dcb9b1ae.png" alt="Wide panoramic view of a party event with cleaners vacuuming carpets, wiping tables, and organizing trash bins, featuring decorated tables, balloon arches, and attendees in casual attire in a sunny park" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">7. Event Cleaning Services</h4>
+                    <p>Tailored cleaning for events, including setup, takedown, and waste management to keep venues pristine.</p>
+                </div>
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0cc6b901-85f5-4862-9b39-8ee05fb681c6.png" alt="Three-tier pricing chart with columns for Basic, Premium, Ultimate plans, listing features like unlimited pickups, priority scheduling, discount percentages, and savings calculators in a purple-themed infographic" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">8. Subscription Plans</h4>
+                    <p>Choose from flexible subscription plans for regular waste collection and cleaning services with discounts.</p>
+                </div>
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7b22e052-051c-4d13-8eea-b15d371bb641.png" alt="World map background with flag icons for languages like English, Spanish, French, German, and Arabic, connected by lines to a translation switcher interface in a global, inclusive design emphasizing accessibility" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">9. Multi-Language Support</h4>
+                    <p>Access the platform in multiple languages for global users with seamless translations.</p>
+                </div>
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/55200060-563f-453c-ab7f-dbd8b7fb8a62.png" alt="Close-up of a survey page with five-star rating system, text fields for comments, and submit button, alongside previously submitted reviews with usernames and timestamps in a feedback section of an app" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">10. Feedback & Rating System</h4>
+                    <p>Rate services and provide feedback to help improve and recognize top-performing providers.</p>
+                </div>
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8cbb1cea-a616-435c-83f8-039f0c1a01ad.png" alt="Official-looking municipal dashboard displaying bar charts of waste volumes, heat maps of collection zones, compliance reports, and policy updates in a formal, governmental interface with national flag accents" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">11. Waste Collection Dashboard for Local Authorities</h4>
+                    <p>Dedicated tools for authorities to monitor regional waste patterns and enforce regulations.</p>
+                </div>
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d2413a9b-7fbb-440a-9355-2be6414ab862.png" alt="Alert-style screen with red urgent icons, input fields for issue description, location sharing options, and quick-call buttons for one-time emergency cleaning or waste removal in a high-contrast, accessible design" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">12. Emergency/One-Time Service</h4>
+                    <p>Quick response for urgent waste removal or cleaning needs with instant booking options.</p>
+                </div>
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c11ee54e-1058-4014-8d76-15c332b6d815.png" alt="Line graph on screen tracing decreasing carbon emissions, plant growth metrics, and recycling percentages over months, with icons for trees, co2 molecules, and award badges in a nature-inspired dashboard" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">13. Sustainability & Impact Tracking</h4>
+                    <p>Monitor your environmental impact with reports on recycled materials and carbon footprint reductions.</p>
+                </div>
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2d593552-d188-48a0-9551-bd28b6d14385.png" alt="Cautionary graphic with yellow hazard symbols, containers for electronic waste, chemicals, and medical items, step-by-step disposal instructions, and contact information for licensed handlers in a safety-focused infographic" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">14. Waste Disposal for Special Items</h4>
+                    <p>GUIDELINES FOR SAFE DISPOSAL OF hazardous waste, electronics, and medical items.</p>
+                </div>
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ff412a26-b48d-427e-996c-76bba374c243.png" alt="Social network mockup with discussion threads on recycling hacks, community clean-up events, and user avatars posting photos of nature walks, fostered by eco-themed emojis and event calendars in a vibrant community page" alt="Online forum interface with threads on eco-friendly tips, event invitations for tree planting, and user profiles with avatars, in a social media-style layout with green hearts and nature icons, no actual emojis used, emphasizing collaborative community participation" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">15. Community Involvement Features</h4>
+                    <p>Join forums, participate in local clean-ups, and share sustainability stories with like-minded individuals.</p>
+                </div>
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5752b308-d7c4-421a-8c97-3f295e82fb91.png" alt="Notification center screen with customizable alert toggles for pickup reminders, service updates, and emergency notifications, featuring slider options for frequency and sound preferences in a red-accented, high-visibility design" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">16. Custom Alerts & Reminders</h4>
+                    <p>Set personalized notifications for service schedules, waste bin levels, and eco-tips.</p>
+                </div>
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/41d56e8b-56d5-457b-ba9e-2d4fe957ff08.png" alt="Gamification board with progress bars, achievement badges for recycled items, points leaderboard, and reward catalog showing discounts and merchandise in a motivational, orange-themed loyalty app" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">17. User Engagement & Incentives</h4>
+                    <p>Earn points for sustainable actions and redeem rewards to encourage eco-friendly habits.</p>
+                </div>
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ff73d26c-af49-4b03-8246-a0ab2a09e029.png" alt="Chronological list of past services with details like dates, providers, materials collected, and PDF export options, viewed in a report-style page with rows of data and summary statistics charts" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">18. Service History & Reports</h4>
+                    <p>Access detailed logs of all services with downloadable reports for your records.</p>
+                </div>
+                <div class="card bg-green-50 p-6 rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/648ea600-66f2-4696-8ddd-ccd8def95d69.png" alt="Live chat interface showing conversation bubbles with support agent, typing indicators, and quick-select help options like billing, scheduling, with user avatar and green theme for environmental support" class="mb-4 rounded" />
+                    <h4 class="text-xl font-semibold mb-2">19. Integrated Chat or Support System</h4>
+                    <p>Get instant help via live chat with our support team for any queries or issues.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="floating-chat" id="chat-btn">?</div>
+
+    <footer class="bg-green-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2023 EcoClean Services. Building a Greener Future Together.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        });
+
+        document.getElementById('chat-btn').addEventListener('click', function() {
+            alert('Integrated Chat: Help is on the way!');
+        });
+
+        window.addEventListener('load', function() {
+            document.querySelectorAll('.animate-fade-in').forEach(el => {
+                el.style.opacity = '1';
+            });
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>

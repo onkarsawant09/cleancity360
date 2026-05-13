@@ -1,0 +1,73 @@
+
+    :root {
+      --primary-color: #28a745;
+      --secondary-color: #007bff;
+      --warning-color: #ffc107;
+      --danger-color: #f11d32ff;
+      --text-color: #e0e0e0;
+      --light-bg: #171718ff;
+      --card-bg: #111111ff;
+      --form-bg: #2a2a2a;
+      --border-color: #4caf50;
+      --btnborder-color: #000000ff;
+      --emojibtn-color: #ffffffff;
+    }
+
+    body {
+      background: var(--light-bg);
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .login-card {
+      max-width: 400px;
+      margin: 80px auto;
+      border-radius: 15px;
+      background: var(--card-bg);
+      padding: 2rem;
+      color: var(--text-color);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .login-card h4 {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    .input-group-text {
+      background: var(--form-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-color);
+    }
+
+    .form-control {
+      background: var(--form-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-color);
+    }
+
+    .form-control::placeholder {
+      color: #aaa;
+    }
+
+    .form-control:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+    }
+
+    .toggle-password {
+      cursor: pointer;
+    }
+
+    .btn-success {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    .btn-success:hover {
+      background-color: #218838;
+      border-color: #1e7e34;
+    }
+  

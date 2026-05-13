@@ -1,0 +1,58 @@
+  :root {
+      --primary-color: #28a745;
+      --secondary-color: #007bff;
+      --warning-color: #ffc107;
+      --danger-color: #f11d32ff;
+      --text-color: #e0e0e0;
+      --light-bg: #171718ff;
+      --card-bg: #111111ff;
+      --form-bg: #2a2a2a;
+      --border-color: #4caf50;
+      --btnborder-color: #000000ff;
+    }
+
+    body {
+      background: var(--light-bg);
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Centered login card */
+    .login-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 70px); /* subtract navbar height */
+      padding-top: 20px;
+    }
+
+    .login-card {
+      width: 100%;
+      max-width: 450px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      background: var(--card-bg);
+      color: var(--text-color);
+    }
+
+    .toggle-password { cursor: pointer; }
+
+    .btn-success { background-color: var(--primary-color); border-color: var(--primary-color); color: white; }
+    .btn-success:hover { background-color: #218838; border-color: #1e7e34; }
+
+    .btn-outline-success { color: var(--primary-color); border-color: var(--primary-color); }
+    .btn-outline-success:hover { background-color: var(--primary-color); color: white; }
+
+    .form-control, .input-group-text {
+      background-color: var(--form-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-color);
+    }
+    .form-control:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+    }
+    .input-group-text { color: var(--primary-color); }
