@@ -1,4 +1,4 @@
-Here is the **merged README** for your **SmartWaste – Waste Management System**, combining all the content from both versions into one complete, professional document.
+**SmartWaste – Waste Management System**, 
 
 ---
 
